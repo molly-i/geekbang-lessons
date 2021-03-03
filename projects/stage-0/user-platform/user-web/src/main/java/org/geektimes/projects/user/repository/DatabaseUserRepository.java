@@ -43,6 +43,19 @@ public class DatabaseUserRepository implements UserRepository {
 
     @Override
     public boolean save(User user) {
+        Connection connection = getConnection();
+        try {
+            PreparedStatement preparedStatement = connection.prepareStatement(INSERT_USER_DML_SQL);
+            preparedStatement.setString(1,user.getName());
+            preparedStatement.setString(2,user.getPassword());
+            preparedStatement.setString(3,user.getEmail());
+            preparedStatement.setString(4,user.getPhoneNumber());
+            int effRowNum = preparedStatement.executeUpdate();
+            System.out.println(effRowNum);
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+
         return false;
     }
 

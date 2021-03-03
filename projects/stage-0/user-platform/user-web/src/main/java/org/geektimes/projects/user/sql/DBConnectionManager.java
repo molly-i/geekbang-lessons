@@ -73,6 +73,17 @@ public class DBConnectionManager {
         // 执行查询语句（DML）
         ResultSet resultSet = statement.executeQuery("SELECT id,name,password,email,phoneNumber FROM users");
 
+        //START TEST
+        //try {
+            PreparedStatement preparedStatement = connection.prepareStatement(INSERT_USER_DML_SQL,new String[]{"name1","111","111","111"});
+            int effRowNum = preparedStatement.executeUpdate();
+            System.out.println(effRowNum);
+        //}catch (Exception e){
+        //    e.printStackTrace();
+        //}
+        //END TEST
+        if (1==1) return;
+
         // BeanInfo
         BeanInfo userBeanInfo = Introspector.getBeanInfo(User.class, Object.class);
 
