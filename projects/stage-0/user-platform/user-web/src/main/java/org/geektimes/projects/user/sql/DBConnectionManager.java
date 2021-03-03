@@ -16,6 +16,15 @@ public class DBConnectionManager {
 
     private Connection connection;
 
+    public DBConnectionManager() {
+        String databaseURL = "jdbc:derby:db/user-platform;create=true";
+        try {
+            connection = DriverManager.getConnection(databaseURL);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
     public void setConnection(Connection connection) {
         this.connection = connection;
     }
@@ -75,9 +84,10 @@ public class DBConnectionManager {
 
         //START TEST
         //try {
-            PreparedStatement preparedStatement = connection.prepareStatement(INSERT_USER_DML_SQL,new String[]{"name1","111","111","111"});
+            /*PreparedStatement preparedStatement = connection.prepareStatement(INSERT_USER_DML_SQL);
+            preparedStatement.setString(1,"name1");
             int effRowNum = preparedStatement.executeUpdate();
-            System.out.println(effRowNum);
+            System.out.println(effRowNum);*/
         //}catch (Exception e){
         //    e.printStackTrace();
         //}

@@ -20,21 +20,6 @@
 </head>
 <body>
 <div class="container">
-	<form class="form-signin">
-		<h1 class="h3 mb-3 font-weight-normal">用户注册成功</h1>
-		<label>请输入用户名</label>
-		${user.name}<br>
-
-		<label>电子邮件</label>
-		${user.email}<br>
-
-		<label>Password</label>
-		${user.password}<br>
-
-		<label>联系电话</label>
-		${user.phoneNumber}<br>
-
-		<p class="mt-5 mb-3 text-muted">&copy; 2017-2021</p>
-	</form>
+	用户注册失败
 </div>
 </body>

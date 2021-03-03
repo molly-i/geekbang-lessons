@@ -2,6 +2,9 @@ package org.geektimes.projects.user.service;
 
 import org.geektimes.projects.user.domain.User;
 
+import java.util.Collection;
+import java.util.List;
+
 /**
  * 用户服务
  */
