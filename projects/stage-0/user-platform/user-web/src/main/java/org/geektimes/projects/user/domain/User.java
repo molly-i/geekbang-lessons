@@ -23,7 +23,7 @@ public class User implements Serializable {
 
     @Id
     @GeneratedValue(strategy = AUTO)
-    @NotNull
+    /*@NotNull*/
     @Min(1)
     private Long id;
 
@@ -40,7 +40,7 @@ public class User implements Serializable {
     private String email;
 
     @Column
-    @Length(min = 11,max = 11)
+    @Length(max = 11)
     private String phoneNumber;
 
     public Long getId() {

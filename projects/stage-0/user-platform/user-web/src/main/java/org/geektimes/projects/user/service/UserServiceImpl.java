@@ -27,7 +27,7 @@ public class UserServiceImpl implements UserService {
         entityManager.persist(user);
 
         // 调用其他方法方法
-        update(user); // 涉及事务
+        //update(user); // 涉及事务
         // register 方法和 update 方法存在于同一线程
         // register 方法属于 Outer 事务（逻辑）
         // update 方法属于 Inner 事务（逻辑）

@@ -19,12 +19,16 @@ public class UserRegisterController implements PageController {
     @Resource(name = "bean/UserService")
     private UserService userService;
 
+    /*public UserRegisterController() {
+        userService = new UserServiceImpl();
+    }*/
+
     @GET
     @POST
     public String execute(HttpServletRequest request, HttpServletResponse response) throws Throwable {
 
         String name = request.getParameter("name");
-        String email = request.getParameter("name");
+        String email = request.getParameter("email");
         String password = request.getParameter("password");
         String phoneNumber = request.getParameter("phoneNumber");
 
